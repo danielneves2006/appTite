@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>AppTite</title>
+    <link rel="icon" type="image/x-icon" href="img/logoAppTiteBranco.svg">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styleAppTite.css'>
+    <script src="https://kit.fontawesome.com/50edefd062.js" crossorigin="anonymous"></script>
+    <!--Link Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="start">
+            <img src="img/filtro.svg" alt="" onclick="filtroBtt()">
+
+            <div id="menuCheckBox">
+                <form action="/action_page.php">
+                    <br>
+
+                      <label class="container">Bebidas
+                        <input type="checkbox" checked="filterSelection('bebidas')">
+                        <span class="checkmark"></span>
+                      </label>
+                      
+                      <label class="container">Café da Manhã
+                        <input type="checkbox" checked="filterSelection('cafeDaManha')">
+                        <span class="checkmark"></span>
+                      </label>
+                      
+                      <label class="container">Doce
+                        <input type="checkbox" checked="filterSelection('doce')">
+                        <span class="checkmark"></span>
+                      </label>
+                      
+                      <label class="container">Salgado
+                        <input type="checkbox" checked="filterSelection('Salgado')">
+                        <span class="checkmark"></span>
+                      </label><br>
+
+                      <input id="bttFiltro" type="submit" value="Filtrar">
+                </form>
+            </div>
+        </div>
+
+        <div id="middle">
+            <div id="elements">
+                <!--Menu-->
+                <div id="menuBar">
+                    <a href="indexAppTite.html">Início</a>
+                    <a href="#">Assinatura</a>
+                    <a href="#">Suas Informações </a>
+                    <a href="#">Filtros/Pesquisa</a>
+                    <a href="#">Políticas de Privacidade</a>
+                    <a href="#">Sobre mim</a>
+                </div>
+
+                <!--Logo-->
+                <a href="#">
+                    <img id="logo" src="img/logoAppTiteBranco.svg" alt="">
+                </a>
+
+                <!--MenuBtt-->
+                <div class="menuBtt" onclick="toggleNav(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div><!--elements-->
+        </div><!--meio-->
+
+        <div id="end">
+            <div class="search">
+                <label for="searchInput">
+                    <span class="fa-solid fa-magnifying-glass"></span>
+                </label>
+                <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Pesquisar">
+            </div>
+
+            <ul id="myUL">
+                <li><a href="receitas/Caipirinha.html">Caipirinha</a></li>
+                <li><a href="receitas/ChocolateQuente.html">Chocolate Quente</a></li>
+                <li><a href="receitas/Omelete.html">Omelete</a></li>
+                <li><a href="receitas/Tapioca.html">Tapioca</a></li>
+                <li><a href="receitas/Brigadeiro.html">Brigadeiro</a></li>
+                <li><a href="receitas/BalaBaiana.html">Bala Baiana</a></li>
+                <li><a href="receitas/Pizza.html">Pizza</a></li>
+                <li><a href="receitas/Enroladinho.html">Enroladinho</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+    <!--CARDS COMIDA-->
+    
+    <div class="CardContainer swiper">
+        <div class="sliderWaper">
+            <div class="cardList swiper-wrapper" style="width: 15rem;">
+
+                <div class="CardItem swiper-slide">
+                    <a href="receitas/Caipirinha.html">
+                        <img src="img/imgCaipirinha.png" alt="">
+                        <h2 class="titleCard">Caipirinha</h2>
+                    </a>
+                </div>
+            
+                <div class="cardList swiper-slide">
+                    <div class="CardItem">
+                        <a href="receitas/ChocolateQuente.html">
+                            <img src="img/imgChocolateQuente.png" alt="">
+                            <h2 class="titleCard">Chocolate Quente</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cardList swiper-slide">
+                    <div class="CardItem">
+                        <a href="receitas/BalaBaiana.html">
+                            <img src="img/imgBalaBaiana.png" alt="">
+                            <h2 class="titleCard">Bala Baiana</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cardList swiper-slide">
+                    <div class="CardItem">
+                        <a href="receitas/Brigadeiro.html">
+                            <img src="img/imgBrigadeiro.png" alt="">
+                            <h2 class="titleCard">Brigadeiro</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cardList swiper-slide">
+                    <div class="CardItem">
+                        <a href="receitas/Pizza.html">
+                            <img src="img/imgPizza.png" alt="">
+                            <h2 class="titleCard">Pizza</h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="CardItem swiper-slide">
+                    <a href="receitas/Enroladinho.html">
+                        <img src="img/imgEnrroladinho.png" alt="">
+                        <h2 class="titleCard">Enrroladinho</h2>
+                    </a>
+                </div>
+
+                <div class="CardItem swiper-slide">
+                    <a href="receitas/Omelete.html">
+                        <img src="img/imgOmelete.png" alt="">
+                        <h2 class="titleCard">Omelete</h2>
+                    </a>
+                </div>
+
+                <div class="CardItem swiper-slide">
+                    <a href="receitas/Tapioca.html">
+                        <img src="img/imgTapioca.png" alt="">
+                        <h2 class="titleCard">Tapioca</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+    </div>
+        
+
+        <!-- SLIDESHOW -->
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text --> 
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="img/galeria/img1.png" style="width:100%">
+                <div class="text">Caption Fuor</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="img/galeria/img2.png" style="width:100% ">
+                <div class="text">Caption Five</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="img/galeria/img3.png" style="width:100% ">
+                <div class="text">Caption Six</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!--CARDS RESTRIÇÃO-->
+        <div id="titleRestritivas">
+            <h1>Receitas Restritivas</h1>
+        </div>
+        <div class="receitasRestritivas">
+            <div class="restritivas">
+                <a href="Zero/indexAppTiteZeroAcucar.html">
+                    <img src="img/semAcucar.png" alt="">
+                </a>
+            </div>
+            <div class="restritivas">
+                <a href="Zero/indexAppTiteZeroGlutem.html">
+                    <img src="img/semGluten.png" alt="">
+                </a>
+            </div>            <div class="restritivas">
+                <a href="Zero/indexAppTiteZeroLactose.html">
+                    <img src="img/semLactose.png" alt="">
+                </a>
+            </div>            <div class="restritivas">
+                <a href="Zero/indexAppTiteZeroVegano.html">
+                    <img src="img/vegano.png" alt="">
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footerConteiner">
+            <div class="redesSociais">
+                <h1>Redes Sociais</h1>
+                <div class="rede">
+                    <img src="img/iconYT2.png" alt="">
+                    <h2>Youtube</h2>
+                </div>
+                <div class="rede">
+                    <img src="img/iconInsta2.png" alt="">
+                    <h2>Instagram</h2>
+                </div>
+                <div class="rede">
+                    <img src="img/iconFace2.png" alt="">
+                    <h2>Facebook</h2>
+                </div>
+            </div>
+            <div class="equipe">
+                <h1>Equipe</h1>
+    
+                <h2>Danilo</h2>
+                <h2>Eamanuel</h2>
+                <h2>Juarez</h2>
+            </div>
+            <div class="contato">
+                <h1>Contato</h1>
+    
+                <h2><span>Email:</span><br> exemplo@gmail.com</h2>
+                <h2><span>Telefone:</span><br>(66) 99222-8765</h2>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src='scriptAppTite.js'></script>
+
+</body>
+
+</html>
